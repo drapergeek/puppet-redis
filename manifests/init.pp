@@ -3,7 +3,13 @@
 # Usage:
 #
 #     include redis
-class redis {
+# with default port:
+#
+#   class { 'redis':
+#     port => 16379
+#   }
+#
+class redis($port = 16379){
   include homebrew
   include redis::config
 
